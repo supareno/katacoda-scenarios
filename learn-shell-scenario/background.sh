@@ -11,6 +11,6 @@ echo "starting to deploy..."
 #
 #echo "Everything ready... Finalise the deployment"
 #
-#deploy.sh
+deploy.sh
 #
 #echo "done" | sudo tee /root/katacoda-background-finished

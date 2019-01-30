@@ -23,8 +23,9 @@ do
     mkdir "target/logs-$folder"
     for i in {0..15}
     do
-        echo "WTF !" > "target/logs-$folder/logfile-$i.log"
-        if [ `echo "$i % 2" | bc` -eq 0 ]; then
+        echo "fooo !" > "target/logs-$folder/logfile-$i.log"
+        if [ `expr $i % 2` -eq 0 ]
+        then
             echo "modulo 2 :-)" > "target/logs-$folder/foo-logfile-$i.log"
         fi
     done
