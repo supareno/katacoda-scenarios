@@ -4,23 +4,45 @@ As seen in the presentation, listing files could be done with _ls_ or _find_. An
 
 ## List files with _find_
 
-### Searching files
+The _find_ command is a command line utility for walking a file hierarchy. It can be used to find files and directories and perform subsequent operations on them. It supports searching by file, folder, name, creation date, modification date, owner and permissions.
+
+It has lots of options. `man find`{{execute}} will show you how to use it and the options associated.
+
+### Search files
 
 `find target/logs-0`{{execute}}
 
-### Searching all the files that end with _log_ 
+### Search all the files that end with _log_ 
 
-_-name_ is used to filder on the file name
+_-name_ is used to filter on the file name
 
 `find target/logs-0 -name "*.log"`{{execute}}
 
-### Searching files and deleting them with _-exec_
+### Search files and interactive delete them with _-exec_
 
-`find target/logs-0 -name "*.log" -exec rm {} \;`{{execute}}
+_-i_ is used for interactive delete
+
+`find target/logs-0 -name "*.log" -exec rm -i {} \;`{{execute}}
 
 
 ## List files with _ls_
 
-### Counting files of a folder
+The _ls_ command is a command line utility to list directory contents.
 
-`find target/logs-2 | wc -l`{{execute}}
+It has lots of options. `man ls`{{execute}} will show you how to use it and the options associated.
+
+### List files of a folder
+
+_-la_ is used to list in long format all the files (normal, hidden, `.` and  `..` )
+
+`ls -la target/logs-2`{{execute}}
+
+### Count files of a folder
+
+`ls target/logs-2 | wc -l`{{execute}}
+
+## Exercices
+
+Write a command to list all the log files bigger than 50 Ko in the **target** folder
+
+

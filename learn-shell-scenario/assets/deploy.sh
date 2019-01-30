@@ -47,4 +47,8 @@ do
         echo "               an error occurs on line $i ..." >> $LOGFILE
         echo "               maybe an NPE or something else ..." >> $LOGFILE
     fi
+    if [ `expr $i % 35` -eq 0 ]
+    then
+echo "[$DATE] [FATAL] argh, a fatal error occurs [ERRORCODE:32] [CODEERROR:54] [ITEM:666] id: $i000000" >> $LOGFILE
+    fi
 done
