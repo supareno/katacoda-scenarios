@@ -28,3 +28,23 @@ do
 done
 
 touch target/logs-0/app.properties
+
+# creating a log file with random content
+LOGFILE=target/random-log.log
+for i in {0..1000}
+do
+    DATE=`date '+%Y-%m-%d %H:%M:%S'`
+    echo "[$DATE] [INFO] something here..." >> $LOGFILE
+    if [ `expr $i % 10` -eq 0 ]
+    then
+        echo "[$DATE] [WARN] oups, something wrong here but is a warning ..." >> $LOGFILE
+        echo "               maybe here or maybe not ..." >> $LOGFILE
+        echo "               be careful ..." >> $LOGFILE
+    fi
+    if [ `expr $i % 25` -eq 0 ]
+    then
+        echo "[$DATE] [ERROR] argh, an error occurs ..." >> $LOGFILE
+        echo "               an error occurs on line $i ..." >> $LOGFILE
+        echo "               maybe an NPE or something else ..." >> $LOGFILE
+    fi
+done
