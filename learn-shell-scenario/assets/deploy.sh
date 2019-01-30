@@ -13,10 +13,6 @@
 cd /root/
 mkdir target
 
-# copy files
-cp files/INV_OISEAU__20170831_223.xml target/
-cp files/aggregator_01272016_100628.log target/
-
 # generate files
 for folder in {0..3}
 do
