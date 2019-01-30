@@ -19,8 +19,7 @@
     ],
     "assets": {
         "host01": [
-            {"file": "deploy.sh", "target": "/usr/local/bin/", "chmod": "+x"},
-            {"file": "aggr.log", "target": "/root/target", "chmod": "+x"}
+            {"file": "deploy.sh", "target": "/usr/local/bin/", "chmod": "+x"}
         ]
     },
     "intro": {
