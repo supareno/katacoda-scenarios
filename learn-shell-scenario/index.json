@@ -1,0 +1,40 @@
+{
+  "title": "Learn shell",
+  "description": "Learn shell with katacoda",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md",
+        "courseData": "background.sh",
+        "code": "foreground.sh"
+      },
+      {
+        "title": "Step 2",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
+      }
+    ],
+    "assets": {
+        "host01": [
+            {"file": "scripts/wait.sh", "target": "/usr/local/bin/", "chmod": "+x"},
+            {"file": "scripts/deploy.sh", "target": "/usr/local/bin/", "chmod": "+x"}
+        ]
+    },
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

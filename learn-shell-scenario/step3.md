@@ -1,0 +1,3 @@
+# Redirect I/O
+
+With a terminal, you can redirect or consume the result of the command, redirect _stdout_ or _stderr_,... 
