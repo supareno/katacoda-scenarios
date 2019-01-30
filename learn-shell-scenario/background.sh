@@ -9,6 +9,6 @@ while true; do sudo grep -i "done" /opt/katacoda-finished > /dev/null && break |
 
 echo "Everything ready... Finalise the deployment"
 
-/opt/deploy.sh
+deploy.sh
 
 echo "done" | sudo tee /root/katacoda-background-finished

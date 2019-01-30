@@ -1,1 +1,1 @@
-sleep 1; /opt/wait.sh
+sleep 1; wait.sh
