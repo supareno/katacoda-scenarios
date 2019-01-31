@@ -49,6 +49,8 @@ do
     fi
     if [ `expr $i % 35` -eq 0 ]
     then
-echo "[$DATE] [FATAL] argh, a fatal error occurs [ERRORCODE:32] [CODEERROR:54] [ITEM:666] id: $i000000" >> $LOGFILE
+        rand=$RANDOM
+        errorCode=$(( ( rand % 100 )  + 1 ))
+        echo "[$DATE] [FATAL] argh, a fatal error occurs [ERRORCODE:$errorCode] [CODEERROR:54] [ITEM:$i] id: $rand" >> $LOGFILE
     fi
 done
