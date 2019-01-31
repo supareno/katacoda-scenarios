@@ -13,13 +13,19 @@
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
-        "text": "step3.md"
+          "title": "Step 3",
+          "text": "step3.md"
+      },
+      {
+          "title": "Step 4",
+          "text": "step4.md"
       }
     ],
     "assets": {
         "host01": [
-            {"file": "deploy.sh", "target": "/usr/local/bin/", "chmod": "+x"}
+            {"file": "deploy.sh", "target": "/usr/local/bin/", "chmod": "+x"},
+            {"file": "config.yml", "target": "/opt/", "chmod": "+rw"},
+            {"file": "httpd.conf", "target": "/opt/", "chmod": "+rw"}
         ]
     },
     "intro": {

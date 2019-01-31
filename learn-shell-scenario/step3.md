@@ -37,17 +37,17 @@ With _grep_, you can display the context associated to the occurence with _-B_ a
 
 ### Search with a regex
 
-Use the _-E_ option to search with a regex to retreive all the 3 numbers error code
+Use the _-E_ option to search with a regex to retreive all the 2 digits error codes
 
-`grep -E "ERRORCODE\:[0-9]{3}" target/random-log.log`{{execute}}
+`grep -E "ERRORCODE\:[0-9]{2}" target/random-log.log`{{execute}}
 
 With the _-o_ option, you can isolate each match
 
-`grep -oE "ERRORCODE\:[0-9]{3}" target/random-log.log`{{execute}} 
+`grep -oE "ERRORCODE\:[0-9]{2}" target/random-log.log`{{execute}} 
 
 Combinated with _sort_ and _uniq_, you can return a list with unique error codes:
 
-`grep -oE "ERRORCODE\:[0-9]{3}" target/random-log.log | sort | uniq`{{execute}} 
+`grep -oE "ERRORCODE\:[0-9]{2}" target/random-log.log | sort | uniq`{{execute}} 
 
 ## Exercices
 

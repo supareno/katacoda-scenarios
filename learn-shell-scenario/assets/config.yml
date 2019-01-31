@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build:
+    docker:
+- image: supareno/java:v8
+    steps:
+      - checkout
+      - run: build
+  test:
+    docker:
+      - image: supareno/java:v8
+    steps:
+      - checkout
+      - run: test
+workflows:
+  version: 2
+  build_and_test:
+  jobs:
+    - build
+    - test
