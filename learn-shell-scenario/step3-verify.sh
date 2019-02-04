@@ -17,7 +17,8 @@ checkCount(){
             result=0
         fi
     fi
-    return 1
 }
+
+checkCount
 
 [ $result -eq 0 ] && echo "done"
