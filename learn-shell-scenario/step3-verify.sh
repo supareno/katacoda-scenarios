@@ -7,13 +7,17 @@
 # `find target/ -name "*.log" -print | xargs grep WARN | wc -l > count-warn`
 #
 #######
+result=1
 
 checkCount(){
-    if [ [ -d /root/count-warn ] && [ `cat /root/count-warn` -eq 223 ] ]
+    if [ -e /root/count-warn ]
     then
-        return 0
+        if [ `cat /root/count-warn` -eq 223 ]
+        then
+            result=0
+        fi
     fi
     return 1
 }
 
-[ checkCount -eq 0 ] && echo "done"
+[ $result -eq 0 ] && echo "done"

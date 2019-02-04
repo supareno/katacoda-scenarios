@@ -9,12 +9,17 @@
 #
 #######
 
-checkCount(){
-    if [ [ -d /root/count-50k ] && [ `cat /root/count-50k` -eq 1 ] ]
-    then
-        return 0
-    fi
-    return 1
-}
+result=1
 
-[ checkCount -eq 0 ] && echo "done"
+checkCount(){
+    if [ -e /root/count-50k ]
+    then
+        if [ `cat /root/count-50k` -eq 1 ]
+        then
+            result=0
+        fi
+    fi
+}
+checkCount
+
+[ $result -eq 0 ] && echo "done"

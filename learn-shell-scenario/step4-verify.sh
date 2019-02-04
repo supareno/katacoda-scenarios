@@ -11,7 +11,7 @@
 #######
 
 checkCount(){
-    if [ -d /opt/config-prod.yml ]
+    if [ -e /opt/config-prod.yml ]
     then
         return `grep "supareno/openjdk:v11" /opt/config-prod.yml | wc -l` -gt 0
     fi
