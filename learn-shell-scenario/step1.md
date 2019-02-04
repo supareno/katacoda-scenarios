@@ -41,8 +41,8 @@ _-la_ is used to list in long format all the files (normal, hidden, `.` and  `..
 
 `ls target/logs-2 | wc -l`{{execute}}
 
-## Exercices
+## Exercise
 
-Write a command to list all the log files bigger than 50 Ko in the **target** folder
+Write a command to list all the log files bigger than 50 Ko in the **target** folder and write the result to a file named **count-50k**
 
 

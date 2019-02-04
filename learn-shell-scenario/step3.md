@@ -49,7 +49,7 @@ Combinated with _sort_ and _uniq_, you can return a list with unique error codes
 
 `grep -oE "ERRORCODE\:[0-9]{2}" target/random-log.log | sort | uniq`{{execute}} 
 
-## Exercice
+## Exercise
 
 Count the occurences of **WARN** in **all** the files that ends with _log_ in the target folder and write the result in the **count-warn** file.
 

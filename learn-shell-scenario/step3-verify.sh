@@ -12,7 +12,7 @@ result=1
 checkCount(){
     if [ -e /root/count-warn ]
     then
-        if [ `cat /root/count-warn` -eq 223 ]
+        if [ `cat /root/count-warn` -eq 133 ]
         then
             result=0
         fi
