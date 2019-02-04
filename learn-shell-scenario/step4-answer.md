@@ -1,6 +1,4 @@
-# Answer step 3
-
-The answer of the exercise of the step 3 is: 
+The command to launch is 
 
 `sed -e 's/java\:v8/openjdk\:v11/g' config.yml > config-prod.yml`{{execute}}
 

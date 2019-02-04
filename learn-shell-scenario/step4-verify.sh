@@ -10,12 +10,15 @@
 #
 #######
 
+result=0
+
 checkCount(){
     if [ -e /opt/config-prod.yml ]
     then
-        return `grep "supareno/openjdk:v11" /opt/config-prod.yml | wc -l` -gt 0
+        result=$(grep "supareno/openjdk:v11" /opt/config-prod.yml | wc -l)
     fi
-    return 1
 }
 
-[ checkCount -eq 1 ] && echo "done"
+checkCount
+
+[ $result -eq 2 ] && echo "done"
