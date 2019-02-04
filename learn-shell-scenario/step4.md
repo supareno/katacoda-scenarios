@@ -54,6 +54,6 @@ After, switch accentued characters with non accentued
 
 By this way, it is easier to replace just a char in every word than searching for each word and replace it...
 
-## Exercices
+## Exercice
 
-Duplicate the _config.yml_ configuration file as a production configuration file and replace the occurences of **supareno/java:v8** with **supareno/java:v11**
+Go to _/opt_ folder and replace the occurences of **supareno/java:v8** with **supareno/openjdk:v11** in the _config.yml_ file and write them in a file named _config-prod.yml_.

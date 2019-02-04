@@ -22,7 +22,11 @@ do
         echo "fooo !" > "target/logs-$folder/logfile-$i.log"
         if [ `expr $i % 2` -eq 0 ]
         then
-            echo "modulo 2 :-)" > "target/logs-$folder/foo-logfile-$i.log"
+            FOOLOGFILE="target/logs-$folder/foo-logfile-$i.log"
+            echo "modulo 2 :-)" >> $FOOLOGFILE
+            echo "[WARN] oups, something wrong here but is a warning ..." >> $FOOLOGFILE
+            echo "               maybe here or maybe not ..." >> $FOOLOGFILE
+            echo "               be careful ..." >> $FOOLOGFILE
         fi
     done
 done
